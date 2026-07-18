@@ -1,15 +1,13 @@
 package com.journal_app.java.service;
 
-import com.journal_app.java.entity.JournalEntry;
+
 import com.journal_app.java.entity.User;
-import com.journal_app.java.repository.JournalEntryRepository;
 import com.journal_app.java.repository.UserRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.bson.types.ObjectId;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Optional;
 
