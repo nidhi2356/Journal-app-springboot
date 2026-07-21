@@ -10,7 +10,7 @@
 
     <appender name = "myFileAppender" class="ch.qos.logback.core.rolling.RollingFileAppender">
         <file>
-            journalApp.log
+            C:/Projects/journalApp.log #provided path
         </file>
         <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
             <fileNamePattern>journalApp-%d{yy-MM-dd_HH-mm}.%i.log</fileNamePattern>

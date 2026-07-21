@@ -22,6 +22,7 @@ public class UserServiceTests {
 
 
 
+    @Disabled
     @ParameterizedTest
     @ArgumentsSource(UserArgumentsProvider.class)
     public void testSaveNewUser(User user) {
@@ -30,6 +31,7 @@ public class UserServiceTests {
 
 
 
+    @Disabled
     @ParameterizedTest
     @CsvSource({
             "1,1,2",

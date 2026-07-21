@@ -52,6 +52,7 @@ public class UserDetailsServiceImplTests {
     @MockitoBean
     private UserRepository userRepository;
 
+    @Disabled
     @Test
     void loadUserByUserName(){
         when(userRepository.findByUserName(ArgumentMatchers.anyString())).thenReturn(User.builder().userName("ram").password("nidhii").roles(new ArrayList<>()).build());

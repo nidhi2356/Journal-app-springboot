@@ -14,12 +14,6 @@ server:
     # context-path: /journal
 
 
-logging:
-  level:
-    com:
-      journal_app:
-        java:DEBUG
-
 #logging:
   #level:
     #root: ERROR (Logs only ERROR-level messages from both the application and internal framework packages.)
