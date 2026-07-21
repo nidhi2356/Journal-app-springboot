@@ -7,6 +7,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.data.mongodb.MongoDatabaseFactory;
 import org.springframework.data.mongodb.MongoTransactionManager;
+import org.springframework.web.client.RestTemplate;
 
 @EnableTransactionManagement
 @SpringBootApplication
@@ -20,6 +21,14 @@ public class JavaApplication {
     public PlatformTransactionManager falana(MongoDatabaseFactory dbFactory){
         return new MongoTransactionManager(dbFactory);
     }
+
+	@Bean
+	public RestTemplate restTemplate(){
+		return new RestTemplate();
+	}
+
+	//We create a RestTemplate bean so Spring can manage and inject a
+	//single reusable RestTemplate instance throughout the application.
 
 }
 

@@ -1,7 +1,9 @@
 package com.journal_app.java.controller;
 
+import com.journal_app.java.api.response.WeatherResponse;
 import com.journal_app.java.entity.User;
 import com.journal_app.java.service.UserService;
+import com.journal_app.java.service.WeatherService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.Authentication;
@@ -15,6 +17,10 @@ public class UserController {
 
     @Autowired
     private UserService userService;
+
+
+    @Autowired
+    private WeatherService weatherService;
 
     /*
     @PutMapping
@@ -50,5 +56,16 @@ public class UserController {
         String userName = authentication.getName();
         userService.deleteByUserName(userName);
         return ResponseEntity.noContent().build(); 
+    }
+
+    @GetMapping
+    public ResponseEntity<?> greeting(Authentication authentication){
+        WeatherResponse weatherResponse = weatherService.getWeather("Mumbai");
+        String greeting = "";
+        if(weatherResponse != null){
+            greeting = ", Weather feels like " + weatherResponse.getCurrent().getFeelslike();
+        }
+        return ResponseEntity.ok("Hi "+ authentication.getName() + greeting);
+
     }
 }
