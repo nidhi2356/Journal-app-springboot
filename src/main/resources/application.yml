@@ -1,17 +1,21 @@
 spring:
   application:
     name: java
-  data :
-    mongodb:
-      database: myjournal
-      auto-index-creation: true
-      uri: ${MONGODB_URI}
+  mongodb:
+    database: myjournal
+    auto-index-creation: true
+    uri: ${MONGODB_URI}
 
 
 server:
   port: 8080
   #servlet :
     # context-path: /journal
+
+elevenlabs:
+  api:
+    key: ${ELEVENLABS_API_KEY}
+    voice-id: ${ELEVENLABS_VOICE_ID}
 
 
 

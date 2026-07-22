@@ -2,6 +2,7 @@ package com.journal_app.java;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 import org.springframework.transaction.PlatformTransactionManager;
@@ -14,12 +15,8 @@ import org.springframework.web.client.RestTemplate;
 public class JavaApplication {
 
 	public static void main(String[] args) {
-		System.out.println("MONGO URI = " + System.getenv("MONGODB_URI"));
 		SpringApplication.run(JavaApplication.class, args);
 	}
-	
-
-
 
 	@Bean
     public PlatformTransactionManager falana(MongoDatabaseFactory dbFactory){
