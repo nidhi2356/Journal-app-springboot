@@ -9,11 +9,12 @@
     </appender>
 
     <appender name = "myFileAppender" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <!-- Log file path -->
         <file>
-            C:/Projects/journalApp.log #provided path
+            C:/Projects/journalApp.log
         </file>
         <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
-            <fileNamePattern>journalApp-%d{yy-MM-dd_HH-mm}.%i.log</fileNamePattern>
+            <fileNamePattern>C:/Projects/journalApp-%d{yyyy-MM-dd}.%i.log</fileNamePattern>
             <maxFileSize>10MB</maxFileSize>
             <maxHistory>10</maxHistory>
         </rollingPolicy>

@@ -18,8 +18,12 @@ elevenlabs:
     voice-id: ${ELEVENLABS_VOICE_ID}
 
 
+weather:
+  api:
+    key: ${WEATHER_API_KEY}
 
-#logging:
-  #level:
+
+
+    #logging:
+    #level:
     #root: ERROR (Logs only ERROR-level messages from both the application and internal framework packages.)
-
