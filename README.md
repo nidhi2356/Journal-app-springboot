@@ -1,7 +1,7 @@
 # 📔 Journal App - Production Ready Spring Boot REST API
 
 ![Java](https://img.shields.io/badge/Java-21-orange)
-![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.x-brightgreen)
+![Spring Boot](https://img.shields.io/badge/Spring%20Boot-4.1.0-brightgreen)
 ![MongoDB](https://img.shields.io/badge/Database-MongoDB-green)
 ![JWT](https://img.shields.io/badge/Security-JWT-blue)
 ![Redis](https://img.shields.io/badge/Cache-Redis-red)
