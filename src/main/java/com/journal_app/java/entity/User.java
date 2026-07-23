@@ -19,9 +19,15 @@ public class User {
 
     @Id
     private ObjectId id;
+
     @Indexed(unique = true)
     @NonNull
     private String userName;
+
+    private String email;
+
+    private boolean sentimentAnalysis;
+
     @NonNull
     private String password;
 

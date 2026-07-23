@@ -8,11 +8,13 @@ import org.junit.jupiter.params.provider.ArgumentsSource;
 import org.junit.jupiter.params.provider.CsvSource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.ActiveProfiles;
 
 import static com.mongodb.internal.connection.tlschannel.util.Util.assertTrue;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 @SpringBootTest
+@ActiveProfiles("test")
 public class UserServiceTests {
     @Autowired
     private UserRepository userRepository;

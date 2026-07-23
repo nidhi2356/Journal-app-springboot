@@ -1,0 +1,13 @@
+mongodb:
+  database: myjournal_test
+  auto-index-creation: true
+  uri: ${MONGODB_TEST_URI}
+
+elevenlabs:
+  api:
+    key: test-dummy-key
+  voice-id: test-dummy-voice
+
+weather:
+  api:
+    key: test-dummy-key

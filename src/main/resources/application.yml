@@ -15,8 +15,7 @@ server:
 elevenlabs:
   api:
     key: ${ELEVENLABS_API_KEY}
-    voice-id: ${ELEVENLABS_VOICE_ID}
-
+  voice-id: ${ELEVENLABS_VOICE_ID}
 
 weather:
   api:
