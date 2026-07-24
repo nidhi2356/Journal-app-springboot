@@ -3,8 +3,10 @@ package com.journal_app.java.controller;
 
 import com.journal_app.java.cache.AppCache;
 import com.journal_app.java.entity.User;
+import com.journal_app.java.scheduler.UserScheduler;
 import com.journal_app.java.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
