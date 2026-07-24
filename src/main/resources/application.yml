@@ -1,6 +1,9 @@
 spring:
   application:
     name: java
+  data:
+    redis:
+      uri: ${REDIS_URI}
   mongodb:
     database: myjournal
     auto-index-creation: true
