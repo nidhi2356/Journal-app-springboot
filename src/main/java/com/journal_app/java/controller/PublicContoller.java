@@ -8,6 +8,10 @@ import com.journal_app.java.model.SentimentData;
 import com.journal_app.java.service.UserDetailsServiceImpl;
 import com.journal_app.java.service.UserService;
 import com.journal_app.java.utilis.JwtUtil;
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
+import io.swagger.v3.oas.annotations.responses.ApiResponses;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,6 +29,10 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/public")
 @RestController
 @Slf4j
+@Tag(
+        name = "Authentication APIs",
+        description = "User Registration and Login APIs"
+)
 public class PublicContoller {
 
     @Autowired
@@ -54,6 +62,15 @@ public class PublicContoller {
     }
 
     @PostMapping("/login")
+    @Operation(
+            summary = "Login User",
+            description = "Authenticates the user and returns a JWT token."
+    )
+    @ApiResponses({
+            @ApiResponse(responseCode = "200", description = "Login successful. JWT token generated."),
+            @ApiResponse(responseCode = "400", description = "Invalid request body."),
+            @ApiResponse(responseCode = "401", description = "Invalid username or password.")
+    })
     public ResponseEntity<?> login(@RequestBody LoginRequest request) {
         try {
 

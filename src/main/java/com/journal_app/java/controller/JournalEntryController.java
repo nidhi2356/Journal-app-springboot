@@ -5,6 +5,11 @@ import com.journal_app.java.entity.JournalEntry;
 import com.journal_app.java.entity.User;
 import com.journal_app.java.service.JournalEntryService;
 import com.journal_app.java.service.UserService;
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
+import io.swagger.v3.oas.annotations.responses.ApiResponses;
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import org.bson.types.ObjectId;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -19,6 +24,11 @@ import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("/journal")
+@Tag(
+        name = "Journal APIs",
+        description = "CRUD operations for Journal Entries"
+)
+@SecurityRequirement(name = "Bearer Authentication")
 public class JournalEntryController {
 
     @Autowired
@@ -27,6 +37,10 @@ public class JournalEntryController {
     @Autowired
     private UserService userService;
 
+    @Operation(
+            summary = "Get All Journal Entries",
+            description = "Returns all journal entries of the logged-in user."
+    )
     @GetMapping
     public ResponseEntity<?> getAllJournalEntriesOfUser(Authentication authentication){
         String userName = authentication.getName();
@@ -40,6 +54,15 @@ public class JournalEntryController {
     }
 
 
+    @ApiResponses({
+            @ApiResponse(responseCode = "201", description = "Journal entry created successfully."),
+            @ApiResponse(responseCode = "400", description = "Invalid journal data."),
+            @ApiResponse(responseCode = "401", description = "User is not authenticated.")
+    })
+    @Operation(
+            summary = "Create Journal Entry",
+            description = "Creates a new journal entry for the authenticated user."
+    )
     @PostMapping
     public ResponseEntity<JournalEntry> createEntry(@RequestBody JournalEntry myEntry, Authentication authentication){
         try{
@@ -52,6 +75,15 @@ public class JournalEntryController {
 
     }
 
+    @ApiResponses({
+            @ApiResponse(responseCode = "200", description = "Journal entry retrieved successfully."),
+            @ApiResponse(responseCode = "401", description = "User is not authenticated."),
+            @ApiResponse(responseCode = "404", description = "Journal entry not found.")
+    })
+    @Operation(
+            summary = "Get Journal Entry",
+            description = "Retrieves a journal entry by its ID."
+    )
     @GetMapping("id/{myId}")
     public ResponseEntity<JournalEntry> getJournalEntryById(@PathVariable ObjectId myId,Authentication authentication) {
         String userName = authentication.getName();
@@ -67,6 +99,15 @@ public class JournalEntryController {
 
     }
 
+    @Operation(
+            summary = "Delete Journal Entry",
+            description = "Deletes a journal entry."
+    )
+    @ApiResponses({
+            @ApiResponse(responseCode = "200", description = "Journal entry deleted successfully."),
+            @ApiResponse(responseCode = "401", description = "User is not authenticated."),
+            @ApiResponse(responseCode = "404", description = "Journal entry not found.")
+    })
     @DeleteMapping("id/{myId}")
     public ResponseEntity<?> deleteJournalEntryById(@PathVariable ObjectId myId, Authentication authentication) {
         String userName = authentication.getName();
@@ -79,6 +120,10 @@ public class JournalEntryController {
 
     }
 
+    @Operation(
+            summary = "Update Journal Entry",
+            description = "Updates an existing journal entry."
+    )
     @PutMapping("id/{id}")
     public ResponseEntity<?> updateJournalById(@PathVariable ObjectId id,
                                                 @RequestBody JournalEntry newEntry,
