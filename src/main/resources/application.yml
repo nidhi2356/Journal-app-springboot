@@ -35,12 +35,9 @@ logging:
     org:
       springframework:
         security: DEBUG
-
-server:
-  port: 8080
-  #servlet :
-    # context-path: /journal
-
+jwt:
+  secret: ${JWT_SECRET}
+  expiration: ${JWT_EXPIRATION}
 elevenlabs:
   api:
     key: ${ELEVENLABS_API_KEY}
@@ -49,6 +46,11 @@ elevenlabs:
 weather:
   api:
     key: ${WEATHER_API_KEY}
+
+server:
+  port: 8080
+    #servlet :
+    # context-path: /journal
 
 
 
