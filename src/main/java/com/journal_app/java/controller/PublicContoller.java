@@ -1,8 +1,11 @@
 package com.journal_app.java.controller;
 
 
+import com.journal_app.java.config.RabbitMQConfig;
 import com.journal_app.java.entity.User;
+import com.journal_app.java.model.SentimentData;
 import com.journal_app.java.service.UserService;
+import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -19,13 +22,6 @@ public class PublicContoller {
     @Autowired
     private UserService userService;
 
-
-    /*
-    @PostMapping("/create-user")
-    public void createUser(@RequestBody User user){
-        userService.saveNewUser(user);
-    }
-     */
 
     @PostMapping("/create-user")
     public ResponseEntity<?> createUser(@RequestBody User user) {

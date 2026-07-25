@@ -19,6 +19,16 @@ spring:
           auth: true
           starttls:
             enable: true
+  rabbitmq:
+    host: warthog.lmq.cloudamqp.com
+    port: 5671
+    username: ${RABBITMQ_USERNAME}
+    password: ${RABBITMQ_PASSWORD}
+    virtual-host: ejseeugf
+    ssl:
+      enabled: true
+    requested-heartbeat: 30s
+    connection-timeout: 30s
 
 logging:
   level:
