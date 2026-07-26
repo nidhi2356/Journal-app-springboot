@@ -2,11 +2,11 @@ package com.journal_app.java.controller;
 
 import com.journal_app.java.service.SpeechService;
 import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.Parameter;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import io.swagger.v3.oas.annotations.tags.Tag;
-import org.bson.types.ObjectId;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;
@@ -19,7 +19,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/speech")
 @Tag(
-        name = "Speech APIs",
+        name = "3. Speech APIs",
         description = "APIs for converting journal entries into speech using an external Text-to-Speech (TTS) service."
 )
 @SecurityRequirement(name = "Bearer Authentication")
@@ -27,8 +27,6 @@ public class SpeechController {
 
     @Autowired
     private SpeechService speechService;
-
-
 
     @Operation(
             summary = "Generate Speech from Journal Entry",
@@ -42,7 +40,11 @@ public class SpeechController {
     })
     @GetMapping("/{journalId}")
     public ResponseEntity<byte[]> generateSpeech(
-            @PathVariable ObjectId journalId) {
+            @Parameter(
+                    description = "Journal Entry ID",
+                    example = "6a664300f765fb9f8192b23b"
+            )
+            @PathVariable String journalId) {
 
         byte[] audio = speechService.generateSpeech(journalId);
 

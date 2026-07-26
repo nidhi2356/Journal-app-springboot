@@ -40,11 +40,11 @@ spring:
               - openid
               - profile
               - email
-logging:
-  level:
-    org:
-      springframework:
-        security: DEBUG
+
+springdoc:
+  swagger-ui:
+    tagsSorter: alpha
+
 jwt:
   secret: ${JWT_SECRET}
   expiration: ${JWT_EXPIRATION}

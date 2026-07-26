@@ -1,7 +1,6 @@
 package com.journal_app.java;
 
-import io.jsonwebtoken.Jwts;
-import io.jsonwebtoken.io.Encoders;
+
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
@@ -12,7 +11,6 @@ import org.springframework.data.mongodb.MongoDatabaseFactory;
 import org.springframework.data.mongodb.MongoTransactionManager;
 import org.springframework.web.client.RestTemplate;
 
-import javax.crypto.SecretKey;
 
 @EnableTransactionManagement
 @SpringBootApplication
@@ -24,7 +22,7 @@ public class JavaApplication {
 	}
 
 	@Bean
-    public PlatformTransactionManager falana(MongoDatabaseFactory dbFactory){
+    public PlatformTransactionManager transactionManager(MongoDatabaseFactory dbFactory){
         return new MongoTransactionManager(dbFactory);
     }
 

@@ -22,7 +22,7 @@ public class JournalEntry {
             description = "Unique identifier of the journal entry.",
             accessMode = Schema.AccessMode.READ_ONLY
     )
-    private ObjectId id;
+    private String id;
 
     @Schema(
             description = "Title of the journal entry.",
@@ -50,4 +50,5 @@ public class JournalEntry {
             example = "HAPPY"
     )
     private Sentiment sentiment;
+
 }

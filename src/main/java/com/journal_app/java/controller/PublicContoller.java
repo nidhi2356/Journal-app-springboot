@@ -30,7 +30,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @Slf4j
 @Tag(
-        name = "Authentication APIs",
+        name =  "1. Authentication APIs",
         description = "User Registration and Login APIs"
 )
 public class PublicContoller {

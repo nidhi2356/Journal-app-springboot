@@ -31,7 +31,7 @@ public class SpeechService {
     @Value("${elevenlabs.voice-id}")
     private String voiceId;
 
-    public byte[] generateSpeech(ObjectId journalId) {
+    public byte[] generateSpeech(String journalId) {
 
         // Logged-in user
         Authentication authentication =

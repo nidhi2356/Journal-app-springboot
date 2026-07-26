@@ -23,7 +23,7 @@ public class User {
             accessMode = Schema.AccessMode.READ_ONLY
     )
     @Id
-    private ObjectId id;
+    private String  id;
 
     @Schema(
             description = "Unique username used for authentication.",

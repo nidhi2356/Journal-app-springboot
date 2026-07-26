@@ -3,7 +3,6 @@ package com.journal_app.java.controller;
 
 import com.journal_app.java.cache.AppCache;
 import com.journal_app.java.entity.User;
-import com.journal_app.java.scheduler.UserScheduler;
 import com.journal_app.java.service.UserService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
@@ -20,7 +19,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/admin")
 @Tag(
-        name = "Admin APIs",
+        name = "5. Admin APIs",
         description = "APIs for administrative operations such as managing users and application cache."
 
 )

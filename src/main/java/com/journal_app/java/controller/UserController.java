@@ -19,7 +19,7 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @RequestMapping("/user")
 @Tag(
-        name = "User APIs",
+        name = "4. User APIs",
         description = "APIs for managing the authenticated user's profile, account, and personalized greeting."
 )
 @SecurityRequirement(name = "Bearer Authentication")
