@@ -1,0 +1,8 @@
+target
+.git
+.idea
+.vscode
+*.log
+effective-pom.xml
+deps.txt
+README.md

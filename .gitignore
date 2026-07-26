@@ -32,5 +32,13 @@ build/
 ### VS Code ###
 .vscode/
 
+### idea ###
+.idea/
+
 ### personal uri ###
 .env
+
+
+deps.txt
+effective-pom.xml
+*.log
