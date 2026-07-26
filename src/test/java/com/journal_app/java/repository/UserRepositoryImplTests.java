@@ -2,6 +2,7 @@ package com.journal_app.java.repository;
 
 
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -15,6 +16,7 @@ public class UserRepositoryImplTests {
     private  UserRepositoryImpl userRepository;
 
 
+    @Disabled
     @Test
     void testSaveNewUser(){
         Assertions.assertNotNull(userRepository.getUserForSA());

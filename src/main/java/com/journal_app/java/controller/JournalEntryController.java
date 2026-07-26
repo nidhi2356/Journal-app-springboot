@@ -81,7 +81,7 @@ public class JournalEntryController {
             @ApiResponse(responseCode = "404", description = "Journal entry not found.")
     })
     @Operation(
-            summary = "Get Journal Entry",
+            summary = "Get Journal Entry by id",
             description = "Retrieves a journal entry by its ID."
     )
     @GetMapping("id/{myId}")

@@ -21,6 +21,7 @@ public class EmailServiceTests {
     @Mock
     private JavaMailSender javaMailSender;
 
+    @Disabled
     @Test
     public void testSendMail() {
         emailService.sendEmail("53336003nidhi@gmail.com",

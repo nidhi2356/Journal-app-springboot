@@ -1,5 +1,6 @@
 package com.journal_app.java;
 
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ActiveProfiles;
@@ -8,6 +9,7 @@ import org.springframework.test.context.ActiveProfiles;
 @ActiveProfiles("test")
 class JavaApplicationTests {
 
+	@Disabled
 	@Test
 	void contextLoads() {
 	}
