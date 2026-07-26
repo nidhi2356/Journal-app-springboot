@@ -1,7 +1,9 @@
 package com.journal_app.java.config;
 
 import com.journal_app.java.filter.JwtFilter;
+import com.journal_app.java.handler.OAuth2LoginSuccessHandler;
 import com.journal_app.java.service.UserDetailsServiceImpl;
+import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -20,15 +22,13 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 
 @Configuration
 @EnableWebSecurity
+@RequiredArgsConstructor
 public class SpringSecurity {
 
     private final UserDetailsServiceImpl userDetailsService;
     private final JwtFilter jwtFilter;
+    private final OAuth2LoginSuccessHandler oAuth2LoginSuccessHandler;
 
-    public SpringSecurity(UserDetailsServiceImpl userDetailsService,JwtFilter jwtFilter) {
-        this.jwtFilter = jwtFilter;
-        this.userDetailsService = userDetailsService;
-    }
 
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
@@ -37,16 +37,29 @@ public class SpringSecurity {
                                 "/public/**",
                                 "/swagger-ui/**",
                                 "/swagger-ui.html",
-                                "/v3/api-docs/**"
+                                "/v3/api-docs/**",
+
+                                // OAuth2 endpoints
+                                "/oauth2/**",
+                                "/login/**"
                         ).permitAll()
                         .requestMatchers("/journal/**", "/user/**","/speech/**").authenticated()
                         .requestMatchers("/admin/**").hasRole("ADMIN")
                         .anyRequest().authenticated())
+
                 // JWT is stateless
                 .sessionManagement(session ->
-                        session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
+                        session.sessionCreationPolicy(SessionCreationPolicy.IF_REQUIRED))
+                .authenticationProvider(authenticationProvider())
+
+                //Enable OAuth2 Login
+                .oauth2Login(oauth -> oauth
+                        .successHandler(oAuth2LoginSuccessHandler)
+                )
+
                 // Disable Basic Auth
                 .httpBasic(AbstractHttpConfigurer::disable)
+
                 // Add JWT Filter before UsernamePasswordAuthenticationFilter
                 .addFilterBefore(jwtFilter, UsernamePasswordAuthenticationFilter.class)
                 .csrf(AbstractHttpConfigurer::disable)
@@ -62,6 +75,7 @@ public class SpringSecurity {
 
         return authProvider;
     }
+
 
     @Bean
     public PasswordEncoder passwordEncoder() {

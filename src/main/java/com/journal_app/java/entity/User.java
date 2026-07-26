@@ -27,7 +27,7 @@ public class User {
 
     @Schema(
             description = "Unique username used for authentication.",
-            example = "nidhi123",
+            example = "nidhi",
             requiredMode = Schema.RequiredMode.REQUIRED
     )
     @Indexed(unique = true)
@@ -36,7 +36,7 @@ public class User {
 
     @Schema(
             description = "Email address of the user.",
-            example = "nidhi.sharma@gmail.com"
+            example = "nidhisharma00200@gmail.com"
     )
     private String email;
 
@@ -48,7 +48,7 @@ public class User {
 
     @Schema(
             description = "Password used to authenticate the user.",
-            example = "Password@123",
+            example = "nidhi",
             requiredMode = Schema.RequiredMode.REQUIRED
     )
     @NonNull

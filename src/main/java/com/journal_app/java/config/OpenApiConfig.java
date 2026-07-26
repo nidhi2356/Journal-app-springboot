@@ -1,6 +1,6 @@
 package com.journal_app.java.config;
 
-
+import io.swagger.v3.oas.models.info.Contact;
 import io.swagger.v3.oas.annotations.enums.SecuritySchemeType;
 import io.swagger.v3.oas.annotations.security.SecurityScheme;
 import io.swagger.v3.oas.models.OpenAPI;
@@ -19,11 +19,15 @@ public class OpenApiConfig {
 
     @Bean
     public OpenAPI journalOpenAPI() {
-
         return new OpenAPI()
                 .info(new Info()
                         .title("Journal App API")
                         .description("REST API documentation for Journal App")
-                        .version("1.0"));
+                        .version("1.0")
+                        .contact(new Contact()
+                                .name("Nidhi Sharma")
+                                .email("nidhisharma00200@gmail.com")
+                        )
+                );
     }
 }
