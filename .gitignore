@@ -39,6 +39,9 @@ build/
 .env
 
 
+target/
+
+
 deps.txt
 effective-pom.xml
 *.log

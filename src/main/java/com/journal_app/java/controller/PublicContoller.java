@@ -1,10 +1,8 @@
 package com.journal_app.java.controller;
 
 
-import com.journal_app.java.config.RabbitMQConfig;
 import com.journal_app.java.dto.LoginRequest;
 import com.journal_app.java.entity.User;
-import com.journal_app.java.model.SentimentData;
 import com.journal_app.java.service.UserDetailsServiceImpl;
 import com.journal_app.java.service.UserService;
 import com.journal_app.java.utilis.JwtUtil;
@@ -13,7 +11,6 @@ import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

@@ -42,7 +42,8 @@ public class SpringSecurity {
 
                                 // OAuth2 endpoints
                                 "/oauth2/**",
-                                "/login/**"
+                                "/login/**",
+                                "/weekly-reflection/**"
                         ).permitAll()
                         .requestMatchers("/journal/**", "/user/**","/speech/**").authenticated()
                         .requestMatchers("/admin/**").hasRole("ADMIN")
