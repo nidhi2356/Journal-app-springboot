@@ -2,10 +2,14 @@
 
 # 📔 Journal App
 
-### 🚀 Production-Ready Spring Boot REST API
+### 🚀 Production-Ready Spring Boot Backend with AI-Powered Journal Analysis
 
 <p>
-A secure and scalable backend application for managing personal journals, featuring JWT Authentication, Google OAuth2, Redis Caching, RabbitMQ Messaging, WeatherStack Integration, ElevenLabs Text-to-Speech, Weekly Sentiment Reports, and Swagger API Documentation.
+A production-ready <b>Spring Boot backend</b> for secure journal management that combines
+<b>JWT Authentication</b>, <b>Google OAuth2</b>, <b>RabbitMQ</b>, <b>Redis</b>,
+<b>WeatherStack</b>, <b>ElevenLabs</b>, and an
+<b>AI-powered journal analysis microservice</b> using the
+<b>Hugging Face Inference API</b>.
 </p>
 
 <p>
@@ -17,9 +21,30 @@ A secure and scalable backend application for managing personal journals, featur
 ![Google OAuth2](https://img.shields.io/badge/Google-OAuth2-4285F4?style=for-the-badge&logo=google)
 ![Redis](https://img.shields.io/badge/Redis-Cache-DC382D?style=for-the-badge&logo=redis)
 ![RabbitMQ](https://img.shields.io/badge/RabbitMQ-Message%20Broker-FF6600?style=for-the-badge&logo=rabbitmq)
+![HuggingFace](https://img.shields.io/badge/HuggingFace-LLM-FFD21E?style=for-the-badge&logo=huggingface)
 ![Swagger](https://img.shields.io/badge/Swagger-OpenAPI-85EA2D?style=for-the-badge&logo=swagger)
-![SonarQube](https://img.shields.io/badge/SonarQube-Code%20Quality-4E9BCD?style=for-the-badge&logo=sonarqube)
 ![Maven](https://img.shields.io/badge/Maven-Build-C71A36?style=for-the-badge&logo=apachemaven)
+![Render](https://img.shields.io/badge/Render-Deployed-46E3B7?style=for-the-badge&logo=render)
+
+</p>
+
+<p>
+
+<a href="https://journal-app-springboot-1-ggau.onrender.com">
+🌐 Live Backend
+</a>
+•
+<a href="https://journal-app-springboot-1-ggau.onrender.com/swagger-ui/index.html">
+📑 Swagger
+</a>
+•
+<a href="https://github.com/nidhi2356/Journal-app-springboot">
+💻 Backend Repository
+</a>
+•
+<a href="https://github.com/nidhi2356/journal-ai-service">
+🤖 AI Microservice
+</a>
 
 </p>
 
@@ -29,504 +54,225 @@ A secure and scalable backend application for managing personal journals, featur
 
 # 📖 About The Project
 
-Journal App is a **production-ready backend REST API** developed using **Spring Boot 4.1.0** and **Java 21**. It is designed to demonstrate modern backend engineering practices including secure authentication, asynchronous messaging, caching, scheduled background jobs, third-party API integrations, and clean layered architecture.
+Journal App is a production-ready backend application built with **Spring Boot** and **Java** that demonstrates modern backend engineering practices through secure authentication, scalable architecture, asynchronous processing, caching, scheduled tasks, and third-party API integrations.
 
-Unlike a traditional CRUD application, this project focuses on solving real-world backend problems such as secure authentication, performance optimization, asynchronous processing, scheduled automation, and maintainable system design.
+Unlike a traditional CRUD application, Journal App incorporates **AI-powered journal analysis** using a dedicated **FastAPI microservice**. The backend securely communicates with the AI service through REST APIs, where the **Hugging Face Inference API** analyzes users' journal entries and generates personalized emotional insights, weekly reflections, and wellness recommendations.
 
-The application enables users to securely maintain journal entries, authenticate using either **JWT** or **Google OAuth2**, generate audio versions of journals using the **ElevenLabs API**, retrieve live weather information through **WeatherStack**, and receive an automated **weekly sentiment summary email** based on their journal activity.
+The project follows a modular architecture that separates business logic, persistence, security, caching, messaging, and AI processing into independent components, making it scalable, maintainable, and production-ready.
 
 ---
 
-# 🌟 Key Highlights
+# ✨ Features
 
-- 🔐 Dual Authentication System (JWT + Google OAuth2)
-- 📔 Secure Journal Management
-- 📧 Automated Weekly Sentiment Email Reports
-- ⚡ Redis Configuration Caching
-- 📨 RabbitMQ Asynchronous Email Processing
-- 🌦 WeatherStack API Integration
-- 🎤 ElevenLabs Text-to-Speech Integration
-- 📑 Interactive Swagger Documentation
-- 🧪 JUnit Testing
-- 📝 Professional Logging using SLF4J & Logback
-- 🔍 Code Quality Analysis with SonarQube
-- 🚀 Deployment Ready (Render)
+### 🔐 Security
+
+- JWT Authentication
+- Google OAuth2 Login
+- Spring Security
+- BCrypt Password Encryption
+- Role-Based Authorization
+- Protected REST APIs
+
+---
+
+### 📔 Journal Management
+
+- Create Journal Entries
+- Update & Delete Journals
+- User-specific Journal Access
+- Secure Ownership Validation
+- Personal Journal Dashboard
+
+---
+
+### 🤖 AI Journal Analysis
+
+- AI-powered Journal Analysis
+- Emotional Insight Generation
+- Personalized Weekly Reflections
+- Wellness Recommendations
+- Hugging Face LLM Integration
+- FastAPI AI Microservice
+
+---
+
+### ⚡ Performance & Scalability
+
+- Redis Configuration Caching
+- RabbitMQ Asynchronous Messaging
+- Scheduled Background Jobs
+- Production-ready Layered Architecture
+
+---
+
+### 🌐 Third-party Integrations
+
+- WeatherStack API
+- ElevenLabs Text-to-Speech
+- Hugging Face Inference API
+
+---
+
+### 🛠 Developer Experience
+
+- Swagger/OpenAPI Documentation
+- JUnit Testing
+- SLF4J + Logback Logging
+- SonarQube Code Analysis
+- Render Deployment
 
 ---
 
 # 🎯 Project Objectives
 
-This project was developed to demonstrate practical backend development concepts commonly used in production-grade applications.
+This project was developed to demonstrate production-grade backend engineering by combining modern Spring Boot development with AI integration.
 
 Major objectives include:
 
-- Designing secure REST APIs using Spring Security
-- Implementing stateless authentication with JWT
-- Supporting social login using Google OAuth2
-- Improving application performance using Redis
-- Implementing asynchronous processing with RabbitMQ
-- Automating scheduled tasks using Spring Scheduler
-- Integrating multiple third-party REST APIs
-- Maintaining clean architecture and code quality
-- Building a scalable and maintainable backend system
+- Build secure REST APIs using Spring Security.
+- Implement JWT and Google OAuth2 authentication.
+- Integrate AI-powered journal analysis through a dedicated microservice.
+- Improve scalability using RabbitMQ and Redis.
+- Consume multiple third-party REST APIs.
+- Follow clean architecture and software engineering best practices.
+- Deploy a cloud-ready backend application.
 
 ---
 
 # 📊 Project Overview
 
 | Property | Details |
-|-----------|----------|
-| Project Type | Backend REST API |
+|-----------|---------|
+| Project Type | Production-ready Backend REST API |
 | Language | Java 21 |
-| Framework | Spring Boot 4.1.0 |
-| Architecture | Layered Architecture |
+| Framework | Spring Boot |
+| Architecture | Layered + Microservice |
 | Database | MongoDB Atlas |
 | Authentication | JWT + Google OAuth2 |
 | Security | Spring Security |
 | Cache | Redis |
 | Messaging | RabbitMQ |
+| AI Service | FastAPI |
+| AI Model | Hugging Face Inference API |
 | External APIs | WeatherStack, ElevenLabs |
 | Documentation | Swagger / OpenAPI |
 | Logging | SLF4J + Logback |
-| Testing | JUnit |
-| Code Quality | SonarQube & SonarLint |
+| Testing | JUnit 5 |
+| Build Tool | Maven |
 | Deployment | Render |
-| REST APIs | ~15 |
 
 ---
 
-# 📑 Table of Contents
+# 📚 Table of Contents
 
 - 📖 About The Project
 - ✨ Features
 - 🏗 System Architecture
 - 🔐 Authentication Flow
 - 📔 Journal Workflow
-- 📧 Weekly Sentiment Workflow
+- 🤖 AI Analysis Workflow
 - 📨 RabbitMQ Workflow
-- ⚡ Redis Cache Workflow
-- 🎤 ElevenLabs Integration
+- ⚡ Redis Workflow
 - 🌦 WeatherStack Integration
+- 🎤 ElevenLabs Integration
 - 📂 Project Structure
 - 🛠 Technology Stack
 - 📡 API Endpoints
 - 🚀 Getting Started
 - ⚙ Configuration
-- 📑 API Documentation
+- 📑 Swagger Documentation
 - 📸 Screenshots
-- 🧪 Testing
-- 🔍 Code Quality
+- 🚀 Deployment
 - 💡 Engineering Decisions
-- 🚀 Future Enhancements
+- 🔮 Future Enhancements
 - 👩‍💻 Author
-# ✨ Features
 
-The Journal App is a production-ready backend REST API that combines secure authentication, asynchronous messaging, scheduled automation, caching, third-party integrations, and clean software architecture. It demonstrates backend development concepts commonly used in real-world applications.
-
----
-
-# 🔐 Authentication & Security
-
-The application provides a secure authentication system using Spring Security with support for both traditional login and Google OAuth2.
-
-### Key Features
-
-- User Registration
-- Username & Password Login
-- JWT Authentication
-- Google OAuth2 Login
-- Spring Security Integration
-- BCrypt Password Encryption
-- Role-Based Authorization
-- Stateless Authentication
-- Protected REST Endpoints
-
-### Highlights
-
-✔ Secure user registration
-
-✔ JWT generation after successful authentication
-
-✔ Login using Google account
-
-✔ Automatic user creation on first Google login
-
-✔ Passwords encrypted using BCrypt
-
-✔ Separate access control for User and Admin APIs
-
----
-
-# 📔 Journal Management
-
-The application allows authenticated users to manage their personal journal entries securely. Every journal is associated with its owner and includes a manually selected sentiment.
-
-### Features
-
-- Create Journal Entry
-- Update Journal Entry
-- Delete Journal Entry
-- View Individual Journal
-- View All Personal Journals
-- Ownership Validation
-- Sentiment Tracking
-
-### Supported Sentiments
-
-Each journal entry contains one of the following predefined sentiment values:
-
-- 😊 Happy
-- 😔 Sad
-- 😡 Angry
-- 😟 Anxious
-
-These sentiments are stored with every journal entry and are later analyzed by the weekly scheduler to identify the user's dominant emotion.
-
----
-
-# 📧 Weekly Sentiment Summary
-
-The application automatically generates a weekly sentiment report using Spring Scheduler.
-
-Every **Sunday at 9:00 AM**, the scheduler:
-
-- Retrieves journal entries from the previous week
-- Counts the occurrence of each sentiment
-- Determines the dominant sentiment
-- Publishes an email request to RabbitMQ
-- Sends a personalized summary email to eligible users
-
-Only users who have:
-
-- Enabled sentiment analysis
-- Added a valid email address
-
-receive the weekly report.
-
----
-
-# 📨 RabbitMQ Integration
-
-RabbitMQ is used for asynchronous email processing.
-
-Instead of sending emails directly from the scheduler, email requests are published to a RabbitMQ queue where they are processed independently by a dedicated consumer.
-
-### Benefits
-
-- Asynchronous Processing
-- Loose Coupling
-- Improved Scalability
-- Faster Scheduler Execution
-- Reliable Message Delivery
-
-### Components Used
-
-- Exchange
-- Queue
-- Producer
-- Consumer
-- Routing Key
-
----
-
-# ⚡ Redis Integration
-
-Redis is used as a configuration cache to improve application performance.
-
-The WeatherStack API configuration is cached in Redis, reducing repeated database queries.
-
-If the configuration is unavailable in Redis, it is automatically retrieved from MongoDB and stored in the cache.
-
-### Features
-
-- Configuration Caching
-- Automatic Cache Refresh
-- Manual Cache Invalidation
-- Reduced MongoDB Queries
-- Faster Response Time
-
----
-
-# 🌦 WeatherStack Integration
-
-The application integrates with the WeatherStack REST API to retrieve real-time weather information.
-
-The WeatherStack API key is securely stored in MongoDB and cached using Redis for improved performance.
-
-### Features
-
-- Live Weather Information
-- REST API Integration
-- JSON Response Processing
-- Redis-backed Configuration Cache
-
----
-
-# 🎤 ElevenLabs Text-to-Speech
-
-Users can convert journal entries into realistic speech using the ElevenLabs API.
-
-The application retrieves the journal content, sends it to the ElevenLabs service, and returns the generated audio.
-
-### Features
-
-- Text-to-Speech Conversion
-- External REST API Integration
-- Audio Generation
-- HTTP POST Communication
-
----
-
-# 📑 Swagger / OpenAPI Documentation
-
-Interactive API documentation is available through Swagger UI.
-
-Developers can explore and test every endpoint directly from the browser.
-
-### Features
-
-- Interactive Documentation
-- JWT Authorization Support
-- Try-It-Out Functionality
-- Request & Response Models
-- Organized API Groups
-
----
-
-# 📝 Logging
-
-The application uses **SLF4J** with **Logback** for structured application logging.
-
-Logging helps monitor application behavior, simplify debugging, and track runtime events.
-
-### Logging Includes
-
-- Application Startup Logs
-- Error Logging
-- Exception Tracking
-- Service-Level Logs
-- Request Processing Logs
-
----
-
-# 🧪 Testing
-
-JUnit is used to validate business logic and improve application reliability.
-
-### Test Coverage
-
-- Service Layer Testing
-- Repository Testing
-- Authentication Logic
-- Business Rule Validation
-
----
-
-# 🔍 Code Quality
-
-Code quality is maintained using **SonarQube** and **SonarLint**.
-
-Static code analysis helps identify issues early and ensures the project remains maintainable and secure.
-
-### Analysis Includes
-
-- Bugs
-- Vulnerabilities
-- Security Hotspots
-- Code Smells
-- Maintainability Rating
-- Reliability Rating
-- Security Rating
-- Technical Debt
 # 🏗 System Architecture
 
-The Journal App follows a layered architecture that separates responsibilities into Controllers, Services, Repositories, and the Database. Additional components such as Redis, RabbitMQ, Spring Scheduler, and external APIs are integrated to improve scalability, maintainability, and performance.
+The Journal App follows a **microservice architecture**, where the Spring Boot backend is responsible for authentication, business logic, data management, scheduling, messaging, and third-party integrations, while a dedicated FastAPI service performs AI-powered journal analysis using LangChain and the Hugging Face Inference API.
 
 ```text
-                                    Client
-                                       │
-                                       ▼
-                          HTTP / HTTPS Requests
-                                       │
-                                       ▼
-                              Spring Security
-                         JWT Filter / OAuth2 Login
-                                       │
-                                       ▼
-                                 REST Controllers
-                                       │
-             ┌───────────────┬─────────┴─────────┬───────────────┐
-             ▼               ▼                   ▼               ▼
-      User Service     Journal Service    Weather Service   Speech Service
-             │               │                   │               │
-             │               │                   │               │
-             ▼               ▼                   ▼               ▼
-      User Repository  Journal Repository  Redis Cache     ElevenLabs API
-             │               │                   │
-             └───────────────┴──────────┬────────┘
-                                        ▼
-                                  MongoDB Atlas
-                                        ▲
-                                        │
-                              Configuration Data
-                                        │
-                                        ▼
-                                   WeatherStack API
-
-                Spring Scheduler
-                       │
-                       ▼
-          Weekly Sentiment Calculation
-                       │
-                       ▼
-               RabbitMQ Producer
-                       │
-                       ▼
-                 RabbitMQ Queue
-                       │
-                       ▼
-              RabbitMQ Consumer
-                       │
-                       ▼
-                  Email Service
-                       │
-                       ▼
-                 User Email Inbox
+                                      Client
+                                         │
+                                         ▼
+                           Spring Boot Backend (Java)
+                                         │
+        ┌────────────────────────────────┼────────────────────────────────┐
+        ▼                                ▼                                ▼
+ Spring Security                  Journal Service                 External APIs
+ JWT + OAuth2                     MongoDB Atlas          WeatherStack • ElevenLabs
+        │
+        ▼
+ Spring Scheduler
+        │
+        ▼
+ Collect Weekly Journal Entries
+        │
+        ▼
+ REST API Call
+        │
+        ▼
+                  FastAPI AI Microservice (Python)
+                              │
+                              ▼
+                  LangChain Prompt Template
+                              │
+                              ▼
+                    ChatHuggingFace Model
+                              │
+                              ▼
+             Hugging Face Inference Endpoint
+             (Meta Llama-3.1-8B-Instruct)
+                              │
+                              ▼
+                  Pydantic Output Parser
+                              │
+                              ▼
+               Structured JSON Analysis Response
+                              │
+                              ▼
+                   Spring Boot Backend
+                              │
+                              ▼
+                     RabbitMQ Producer
+                              │
+                              ▼
+                        RabbitMQ Queue
+                              │
+                              ▼
+                      RabbitMQ Consumer
+                              │
+                              ▼
+                        Email Service
+                              │
+                              ▼
+                         User Email
 ```
-
----
-
-# 📐 Application Layers
-
-## 1️⃣ Controller Layer
-
-The Controller layer exposes REST endpoints and handles incoming HTTP requests.
-
-### Responsibilities
-
-- Receive client requests
-- Validate request parameters
-- Delegate business logic to services
-- Return HTTP responses
-
-Current Controllers
-
-- PublicController
-- UserController
-- JournalEntryController
-- AdminController
-- SpeechController
-
----
-
-## 2️⃣ Service Layer
-
-The Service layer contains the application's business logic.
-
-Responsibilities include:
-
-- User Authentication
-- Journal Management
-- Weather Integration
-- Redis Cache Handling
-- RabbitMQ Messaging
-- Email Processing
-- Speech Generation
-- Weekly Sentiment Analysis
-
----
-
-## 3️⃣ Repository Layer
-
-Repositories provide communication between the application and MongoDB.
-
-Repositories used:
-
-- UserRepository
-- JournalEntryRepository
-- ConfigJournalAppRepository
-
----
-
-## 4️⃣ Database Layer
-
-MongoDB Atlas stores all persistent application data.
-
-Collections include:
-
-- users
-- journal_entries
-- config_journal_app
 
 ---
 
 # 🔐 Authentication Flow
 
 ```text
-                User
-                  │
-                  ▼
-      Username & Password Login
-                  │
-                  ▼
-         Spring Security
-                  │
-                  ▼
-      UserDetailsService
-                  │
-                  ▼
-       Validate Credentials
-                  │
-          Success / Failure
-                  │
-                  ▼
-          Generate JWT Token
-                  │
-                  ▼
-        Return JWT to Client
-                  │
-                  ▼
- Client sends JWT in Authorization Header
-                  │
-                  ▼
-             JWT Filter
-                  │
-                  ▼
-        Protected REST Endpoints
-```
-
----
-
-# 🌐 Google OAuth2 Flow
-
-```text
-                User
-                  │
-                  ▼
-       Login with Google
-                  │
-                  ▼
-       Google Authentication
-                  │
-                  ▼
-   OAuth2LoginSuccessHandler
-                  │
-                  ▼
-      User Exists in MongoDB?
-            │             │
-          Yes             No
-           │              │
-           │        Create New User
-           └──────────────┘
-                  │
-                  ▼
-         Generate JWT Token
-                  │
-                  ▼
-        Return Token to Client
-                  │
-                  ▼
-        Access Protected APIs
+User
+ │
+ ▼
+Login / Google Sign In
+ │
+ ▼
+Spring Security
+ │
+ ├──────────────┐
+ │              │
+ ▼              ▼
+JWT Login   Google OAuth2
+ │              │
+ └──────┬───────┘
+        ▼
+Generate JWT Token
+        │
+        ▼
+Access Protected APIs
 ```
 
 ---
@@ -534,322 +280,235 @@ Collections include:
 # 📔 Journal Management Workflow
 
 ```text
-          Authenticated User
-                  │
-                  ▼
-          Create Journal Entry
-                  │
-                  ▼
-        Select Sentiment
-(Happy / Sad / Angry / Anxious)
-                  │
-                  ▼
-       Save Journal in MongoDB
-                  │
-                  ▼
-    Journal Associated with User
+Authenticated User
+        │
+        ▼
+Create / Update Journal
+        │
+        ▼
+Journal Stored in MongoDB
+        │
+        ▼
+Associated with User
+        │
+        ▼
+Available for Weekly AI Analysis
 ```
 
 ---
 
-# 📧 Weekly Sentiment Workflow
+# 🤖 AI Journal Analysis Workflow
+
+Every week, the backend automatically prepares the user's journal entries and sends them to the AI microservice for contextual analysis.
 
 ```text
-          Spring Scheduler
-      (Every Sunday - 9:00 AM)
-                  │
-                  ▼
-      Retrieve Weekly Journals
-                  │
-                  ▼
-      Count Sentiment Frequency
-                  │
-                  ▼
-    Determine Dominant Sentiment
-                  │
-                  ▼
-     Publish Email Request
-                  │
-                  ▼
-            RabbitMQ Queue
-                  │
-                  ▼
-        RabbitMQ Consumer
-                  │
-                  ▼
-          EmailService
-                  │
-                  ▼
-      Weekly Sentiment Email
+Spring Scheduler
+        │
+        ▼
+Retrieve Weekly Journals
+        │
+        ▼
+Create WeeklyAnalysisRequest
+        │
+        ▼
+POST /analyze-week
+        │
+        ▼
+FastAPI Route
+        │
+        ▼
+Service Layer
+        │
+        ▼
+Merge Journal Entries
+        │
+        ▼
+LangChain Prompt Template
+        │
+        ▼
+ChatHuggingFace
+        │
+        ▼
+Meta Llama 3.1 (Hugging Face Endpoint)
+        │
+        ▼
+LLM Response
+        │
+        ▼
+Pydantic Output Parser
+        │
+        ▼
+Structured JSON Response
+        │
+        ▼
+Spring Boot Backend
 ```
+
+---
+
+# 📋 AI Response Structure
+
+The AI service returns a structured response instead of raw text.
+
+```json
+{
+  "dominantEmotion": "...",
+  "mentalWellnessScore": 0,
+  "weeklySummary": "...",
+  "positiveMoments": [],
+  "challenges": [],
+  "recommendations": [],
+  "motivationalQuote": "...",
+  "nextWeekFocus": "..."
+}
+```
+
+---
+
+# 🧠 AI Analysis Features
+
+The AI microservice performs contextual journal analysis using **LangChain**, **Meta Llama 3.1**, and **Pydantic Output Parsing**.
+
+### It generates
+
+- Dominant emotional pattern
+- Mental wellness score
+- Weekly journal summary
+- Positive moments
+- Key challenges
+- Personalized wellness recommendations
+- Motivational quote
+- Next week's focus
+
+Unlike keyword-based sentiment analysis, the model understands the context across multiple journal entries to generate personalized insights.
 
 ---
 
 # 📨 RabbitMQ Workflow
 
 ```text
-Weekly Sentiment Scheduler
-             │
-             ▼
-     RabbitMQ Producer
-             │
-             ▼
-         Exchange
-             │
-             ▼
-           Queue
-             │
-             ▼
-RabbitMQ Consumer Service
-             │
-             ▼
-        Email Service
-             │
-             ▼
-       User Receives Email
+Spring Boot Backend
+        │
+        ▼
+Generate Weekly Analysis
+        │
+        ▼
+Publish Email Request
+        │
+        ▼
+RabbitMQ Exchange
+        │
+        ▼
+RabbitMQ Queue
+        │
+        ▼
+Consumer Service
+        │
+        ▼
+Email Service
+        │
+        ▼
+User Receives Weekly Reflection
 ```
 
 ---
 
-# ⚡ Redis Cache Workflow
+# ⚡ Redis Workflow
 
 ```text
-      Weather Request
-             │
-             ▼
-      Check Redis Cache
-             │
-      ┌──────┴──────┐
-      │             │
-   Cache Hit    Cache Miss
-      │             │
-      ▼             ▼
- Return API    Read MongoDB
-    Config          │
-                    ▼
-           Store in Redis
-                    │
-                    ▼
-          Call WeatherStack API
+Weather Request
+        │
+        ▼
+Check Redis Cache
+        │
+   ┌────┴────┐
+   │         │
+Hit        Miss
+ │           │
+ ▼           ▼
+Return    MongoDB
+Cached       │
+Config       ▼
+        Store in Redis
+              │
+              ▼
+      Call WeatherStack API
 ```
-
----
-
-# 🌦 WeatherStack Integration
-
-```text
-User Request
-      │
-      ▼
-Weather Controller
-      │
-      ▼
-Weather Service
-      │
-      ▼
-Redis Cache
-      │
-      ▼
-WeatherStack API
-      │
-      ▼
-Weather Response
-      │
-      ▼
-Return JSON Response
-```
-
----
-
-# 🎤 ElevenLabs Integration
-
-```text
-User Request
-      │
-      ▼
-Speech Controller
-      │
-      ▼
-Retrieve Journal Entry
-      │
-      ▼
-Journal Service
-      │
-      ▼
-ElevenLabs API
-      │
-      ▼
-Generated Audio
-      │
-      ▼
-Return Audio Response
-```
-
----
-
-# 💡 Why This Architecture?
-
-This architecture was designed to keep the application modular, scalable, and easy to maintain.
-
-### Design Principles
-
-- Separation of Concerns
-- Layered Architecture
-- Stateless Authentication
-- Asynchronous Processing
-- High Performance through Caching
-- Loose Coupling using RabbitMQ
-- External API Abstraction
-- Clean Service-Oriented Design
-# 📂 Project Structure
-
-The project follows a clean layered architecture to separate concerns and improve maintainability.
-
-```text
-Journal-App
-│
-├── src
-│   ├── main
-│   │   ├── java
-│   │   │   └── com.journal_app.java
-│   │   │
-│   │   ├── config
-│   │   │      ├── OpenApiConfig
-│   │   │      ├── PasswordConfig
-│   │   │      ├── RabbitMQConfig
-│   │   │      ├── RedisConfig
-│   │   │      └── SpringSecurity
-│   │   │
-│   │   ├── controller
-│   │   │      ├── AdminController
-│   │   │      ├── JournalEntryController
-│   │   │      ├── PublicController
-│   │   │      ├── SpeechController
-│   │   │      └── UserController
-│   │   │
-│   │   ├── dto
-│   │   │
-│   │   ├── entity
-│   │   │      ├── User
-│   │   │      ├── JournalEntry
-│   │   │      └── ConfigJournalAppEntity
-│   │   │
-│   │   ├── enums
-│   │   │      └── Sentiment
-│   │   │
-│   │   ├── filter
-│   │   │      └── JwtFilter
-│   │   │
-│   │   ├── handler
-│   │   │      └── OAuth2LoginSuccessHandler
-│   │   │
-│   │   ├── repository
-│   │   │      ├── UserRepository
-│   │   │      ├── JournalEntryRepository
-│   │   │      ├── ConfigJournalAppRepository
-│   │   │      └── UserRepositoryImpl
-│   │   │
-│   │   ├── scheduler
-│   │   │      └── UserScheduler
-│   │   │
-│   │   ├── service
-│   │   │      ├── EmailService
-│   │   │      ├── JournalEntryService
-│   │   │      ├── RedisService
-│   │   │      ├── SentimentConsumerService
-│   │   │      ├── SpeechService
-│   │   │      ├── UserDetailsServiceImpl
-│   │   │      ├── UserService
-│   │   │      └── WeatherService
-│   │   │
-│   │   └── utils
-│   │
-│   └── resources
-│       ├── application.yml
-│       ├── application.properties
-│       ├── logback.xml
-│       ├── static
-│       └── templates
-│
-└── pom.xml
-```
-
----
-
-# 🛠 Technology Stack
-
-| Category | Technology |
-|----------|------------|
-| Language | Java 21 |
-| Framework | Spring Boot 4.1.0 |
-| Build Tool | Maven |
-| Database | MongoDB Atlas |
-| Security | Spring Security |
-| Authentication | JWT + Google OAuth2 |
-| Cache | Redis |
-| Message Broker | RabbitMQ |
-| API Documentation | Swagger / OpenAPI |
-| Weather API | WeatherStack |
-| Text-to-Speech | ElevenLabs |
-| Logging | SLF4J + Logback |
-| Testing | JUnit |
-| Code Quality | SonarQube & SonarLint |
-| Deployment | Render |
-
----
-
 # 📡 REST API Overview
 
-The application exposes REST APIs grouped by functionality.
+The Spring Boot backend exposes REST APIs grouped by business functionality.
 
-| Controller | Description |
-|------------|-------------|
-| PublicController | Public endpoints such as user registration, login, weather, and Google OAuth2 authentication |
-| UserController | User profile management and user-specific operations |
-| JournalEntryController | CRUD operations for journal entries |
-| AdminController | Administrative operations including cache management |
-| SpeechController | Convert journal entries into speech using ElevenLabs |
+| Module | Description |
+|---------|-------------|
+| Authentication | User Registration, Login & Google OAuth2 |
+| Journal | Create, Update, Delete & View Journal Entries |
+| User | User Profile Management |
+| Weather | Current Weather Information |
+| Speech | Convert Journal Entries to Speech |
+| Admin | Administrative Operations |
 
 ---
 
 # 🔗 Major API Groups
 
-## 👤 Authentication APIs
+## 🔐 Authentication APIs
 
-- User Registration
-- User Login
-- Google OAuth2 Login
-- JWT Authentication
+| Method | Endpoint | Description |
+|---------|----------|-------------|
+| POST | `/public/signup` | Register a new user |
+| POST | `/public/login` | Authenticate user |
+| GET | `/oauth2/authorization/google` | Google OAuth2 Login |
 
 ---
 
 ## 📔 Journal APIs
 
-- Create Journal
-- Update Journal
-- Delete Journal
-- Get Journal by ID
-- Get All Journals
+| Method | Endpoint | Description |
+|---------|----------|-------------|
+| POST | `/journal` | Create Journal Entry |
+| GET | `/journal` | Get User Journals |
+| GET | `/journal/{id}` | Get Journal by ID |
+| PUT | `/journal/{id}` | Update Journal |
+| DELETE | `/journal/{id}` | Delete Journal |
 
 ---
 
 ## 🌦 Weather APIs
 
-- Get Current Weather
+| Method | Endpoint | Description |
+|---------|----------|-------------|
+| GET | `/weather` | Retrieve Current Weather |
 
 ---
 
 ## 🎤 Speech APIs
 
-- Convert Journal Entry to Speech
+| Method | Endpoint | Description |
+|---------|----------|-------------|
+| POST | `/speech/{journalId}` | Convert Journal Entry to Speech |
 
 ---
 
-## 👨‍💼 Admin APIs
+# 🤖 AI Integration
 
-- Refresh Redis Cache
-- Clear Redis Cache
-- Administrative Operations
+The backend integrates with a dedicated **FastAPI AI microservice** to provide AI-powered journal analysis.
+
+Instead of embedding AI logic inside the Spring Boot application, the backend communicates with the AI service using REST APIs, allowing both services to evolve independently.
+
+### AI Workflow
+
+1. Spring Scheduler retrieves journal entries from the previous week.
+2. The backend creates a `WeeklyAnalysisRequest`.
+3. Journal entries are sent to the FastAPI AI microservice.
+4. The AI service analyzes the journals using **LangChain** and the **Hugging Face Inference Endpoint**.
+5. A structured JSON response containing emotional insights and recommendations is returned.
+6. Spring Boot publishes the response to RabbitMQ.
+7. The Email Service delivers the personalized weekly reflection to the user.
+
+> 📌 The AI microservice is maintained in a separate repository:
+
+**AI Repository:**  
+https://github.com/nidhi2356/journal-ai-service
 
 ---
 
@@ -857,24 +516,22 @@ The application exposes REST APIs grouped by functionality.
 
 ## Prerequisites
 
-Before running the project, ensure you have the following installed:
+Before running the project, install:
 
 - Java 21
-- Maven 3.9+
-- MongoDB Atlas Account
-- Redis Server
-- RabbitMQ Server
+- Maven
+- MongoDB Atlas
+- Redis
+- RabbitMQ
 - Git
 
 ---
 
-## Clone Repository
+## Clone the Repository
 
 ```bash
 git clone https://github.com/nidhi2356/Journal-app-springboot.git
 ```
-
-Move into the project directory:
 
 ```bash
 cd Journal-app-springboot
@@ -890,13 +547,13 @@ mvn clean install
 
 ---
 
-## Run the Application
+## Run the Backend
 
 ```bash
 mvn spring-boot:run
 ```
 
-The application starts at:
+The backend starts on:
 
 ```
 http://localhost:8080
@@ -904,159 +561,325 @@ http://localhost:8080
 
 ---
 
-# ⚙ Environment Variables
+# 🤖 AI Microservice Setup
 
-Create an `application.properties` or configure the following values before running the application.
+This project depends on a dedicated AI service for journal analysis.
 
-| Property | Description |
-|----------|-------------|
-| MongoDB URI | MongoDB Atlas connection string |
-| JWT Secret | Secret key used for JWT generation |
-| Google Client ID | Google OAuth2 Client ID |
-| Google Client Secret | Google OAuth2 Client Secret |
-| Redis Host | Redis server host |
-| Redis Port | Redis server port |
-| RabbitMQ Host | RabbitMQ server host |
-| RabbitMQ Username | RabbitMQ username |
-| RabbitMQ Password | RabbitMQ password |
-| WeatherStack API Key | API key for WeatherStack |
-| ElevenLabs API Key | API key for ElevenLabs |
-| Mail Username | Email account used for sending emails |
-| Mail Password | Email application password |
+Clone the AI repository:
+
+```bash
+git clone https://github.com/nidhi2356/journal-ai-service.git
+```
+
+Follow the setup instructions in the AI repository before starting the backend.
+
+Once running, configure the backend to use the AI service URL.
+
+---
+
+# ⚙ Configuration
+
+Configure the following environment variables before running the application.
+
+| Variable | Purpose |
+|----------|---------|
+| MongoDB URI | MongoDB Atlas Connection |
+| JWT Secret | JWT Signing Key |
+| Google Client ID | OAuth2 Client ID |
+| Google Client Secret | OAuth2 Client Secret |
+| Redis Host | Redis Configuration |
+| RabbitMQ Host | RabbitMQ Configuration |
+| WeatherStack API Key | Weather Service |
+| ElevenLabs API Key | Text-to-Speech Service |
+| AI Service URL | FastAPI AI Endpoint |
+| Mail Username | SMTP Username |
+| Mail Password | SMTP Password |
 
 ---
 
 # 📑 API Documentation
 
-Swagger UI is available after the application starts.
+Interactive Swagger documentation is available at:
 
 ```
 http://localhost:8080/swagger-ui/index.html
 ```
 
-Using Swagger, developers can:
+Using Swagger you can:
 
-- Explore available endpoints
+- Explore all REST APIs
 - Authenticate using JWT
 - Execute API requests
-- Inspect request and response models
-- Test APIs without external tools
+- View request/response models
+- Test endpoints without Postman
 
 ---
+
+# 🔗 Related Repositories
+
+| Repository | Purpose |
+|------------|---------|
+| Journal App (Spring Boot) | Main backend application |
+| Journal AI Service | AI-powered journal analysis microservice |
+
+**Spring Boot Backend:**  
+https://github.com/nidhi2356/Journal-app-springboot
+
+**AI Microservice:**  
+https://github.com/nidhi2356/journal-ai-service
 
 # 🌍 Deployment
 
-The application is deployed on **Render**.
+The application is deployed on **Render** for public access.
 
-Before deployment:
+### 🔗 Live Services
 
-- Configure all environment variables in Render.
-- Update the Google OAuth2 redirect URI.
-- Configure MongoDB Atlas network access.
-- Configure Redis and RabbitMQ instances.
-- Verify WeatherStack and ElevenLabs API keys.
-- Ensure Swagger is accessible in the deployed environment.
-# 📸 Screenshots
-
-The following screenshots provide a quick overview of the application's API documentation and database structure.
+| Service | URL |
+|----------|-----|
+| Backend | https://journal-app-springboot-1-ggau.onrender.com |
+| Swagger UI | https://journal-app-springboot-1-ggau.onrender.com/swagger-ui/index.html |
+| AI Microservice | *(Runs as an independent FastAPI service)* |
 
 ---
 
-## 📑 Swagger UI
+### Before Deployment
 
-Interactive API documentation generated using OpenAPI. Developers can explore, authorize, and test REST endpoints directly from the browser.
+Configure the following services:
+
+- MongoDB Atlas
+- Redis Cloud
+- CloudAMQP (RabbitMQ)
+- WeatherStack API
+- ElevenLabs API
+- Hugging Face Token
+- Google OAuth2 Credentials
+- SMTP Email Credentials
+
+The backend communicates with the AI microservice through REST APIs and requires the AI service URL to be configured before deployment.
+
+---
+
+# 📸 Screenshots
+
+## 📑 Swagger Documentation
+
+Interactive API documentation generated using Swagger/OpenAPI.
 
 <p align="center">
-    <img src="assets/screenshots/swagger-ui.png"
-         alt="Swagger UI"
-         width="100%">
+<img src="assets/screenshots/swagger-ui.png" width="100%">
 </p>
 
 ---
 
 ## 🍃 MongoDB Atlas
 
-MongoDB Atlas is used as the primary NoSQL database for storing user information, journal entries, and application configuration.
+MongoDB Atlas stores users, journal entries, and application configuration.
 
 <p align="center">
-    <img src="assets/screenshots/mongodb-atlas.png"
-         alt="MongoDB Atlas"
-         width="90%">
+<img src="assets/screenshots/mongodb-atlas.png" width="90%">
 </p>
-# 💡 Key Engineering Decisions
 
-This project was designed with maintainability, scalability, and performance in mind.
+---
+
+## 📧 Weekly Reflection Email
+
+Example of the personalized AI-generated weekly reflection email.
+
+<p align="center">
+<img src="assets/screenshots/weekly-email.png" width="90%">
+</p>
+
+---
+
+## 🤖 AI Analysis Response
+
+Example response returned by the AI microservice.
+
+```json
+{
+  "dominantEmotion": "Happy",
+  "mentalWellnessScore": 84,
+  "weeklySummary": "...",
+  "positiveMoments": [
+    "...",
+    "..."
+  ],
+  "challenges": [
+    "...",
+    "..."
+  ],
+  "recommendations": [
+    "...",
+    "..."
+  ],
+  "motivationalQuote": "...",
+  "nextWeekFocus": "..."
+}
+```
+
+---
+
+# 💡 Engineering Decisions
+
+This project was designed with scalability, maintainability, and modularity in mind.
 
 | Decision | Reason |
 |----------|--------|
-| Spring Boot | Rapid development of production-ready REST APIs |
-| JWT Authentication | Stateless and secure authentication mechanism |
-| Google OAuth2 | Simplifies login while maintaining secure authorization |
-| MongoDB Atlas | Flexible NoSQL database suitable for journal data |
-| Redis | Reduces repeated MongoDB lookups by caching WeatherStack configuration |
-| RabbitMQ | Decouples scheduled tasks from email delivery for improved scalability |
-| Spring Scheduler | Automates weekly sentiment analysis and background tasks |
-| WeatherStack API | Provides real-time weather information |
-| ElevenLabs API | Converts journal entries into natural-sounding speech |
-| Swagger | Interactive API documentation for testing and development |
-| SonarQube | Maintains code quality through static analysis |
-| SLF4J + Logback | Structured logging for monitoring and debugging |
+| Spring Boot | Build production-ready REST APIs |
+| Layered Architecture | Clear separation of concerns |
+| JWT Authentication | Stateless authentication |
+| Google OAuth2 | Secure social login |
+| MongoDB Atlas | Flexible document storage |
+| Redis | Reduce repeated configuration lookups |
+| RabbitMQ | Asynchronous email processing |
+| FastAPI Microservice | Decouple AI processing from backend |
+| LangChain | Prompt management & structured LLM interaction |
+| Hugging Face Endpoint | AI-powered contextual journal analysis |
+| Pydantic Output Parser | Reliable structured JSON responses |
+| Swagger | Interactive API documentation |
+| SLF4J + Logback | Centralized logging |
+| JUnit | Unit testing |
+| Render | Cloud deployment |
 
 ---
 
 # 🚀 Future Enhancements
 
-The following features can further enhance the application:
+Planned improvements include:
 
-- 📱 Frontend using React or Angular
-- 📊 Personal sentiment analytics dashboard
-- 📈 Monthly sentiment trends
-- 🤖 AI-powered sentiment detection
-- 📎 Image attachments in journal entries
-- 🔍 Full-text journal search
-- ⭐ Favorite journal entries
-- 📂 Journal categories and tags
-- 📤 PDF export of journals
-- ☁ Docker containerization
+- 📱 React / Next.js frontend
+- 📊 Personal wellness dashboard
+- 📈 Monthly emotional trend analysis
+- 🎙 Voice journal entries
+- 🖼 Image-based journal entries
+- 🔍 Semantic journal search using vector embeddings
+- 📄 PDF export for journals and AI reports
+- 🔔 Push notifications
+- 🐳 Docker containerization
 - ☸ Kubernetes deployment
-- 🔄 CI/CD pipeline using GitHub Actions
+- 🔄 CI/CD using GitHub Actions
 - 📊 Monitoring with Prometheus & Grafana
+- 📈 OpenTelemetry distributed tracing
+- 🌐 Multi-language AI journal analysis
 
 ---
 
+# ⭐ Project Highlights
+
+✔ Production-ready Spring Boot backend
+
+✔ Secure authentication using JWT & Google OAuth2
+
+✔ AI-powered journal analysis using LangChain & Hugging Face
+
+✔ FastAPI microservice architecture
+
+✔ Redis caching
+
+✔ RabbitMQ asynchronous messaging
+
+✔ WeatherStack & ElevenLabs integrations
+
+✔ Automated weekly AI reflections
+
+✔ Interactive Swagger documentation
+
+✔ Cloud deployment on Render
+
 # 🤝 Contributing
 
-Contributions are welcome.
+Contributions are welcome!
 
-If you have suggestions for improvements or new features:
+If you'd like to improve the project, add new features, or fix bugs, feel free to contribute.
 
-1. Fork the repository
-2. Create a new branch
-3. Commit your changes
-4. Push the branch
-5. Open a Pull Request
+### Contribution Steps
+
+1. Fork the repository.
+2. Create a feature branch.
+
+```bash
+git checkout -b feature/your-feature-name
+```
+
+3. Commit your changes.
+
+```bash
+git commit -m "feat: Add new feature"
+```
+
+4. Push the branch.
+
+```bash
+git push origin feature/your-feature-name
+```
+
+5. Open a Pull Request.
+
+---
+
+# 📌 Roadmap
+
+The project will continue evolving with new backend and AI capabilities.
+
+### Planned Features
+
+- ✅ AI-powered weekly reflections
+- 🔄 Monthly AI wellness reports
+- 🔄 Semantic journal search
+- 🔄 AI chatbot for journal conversations
+- 🔄 Voice journal transcription
+- 🔄 Image-based journal entries
+- 🔄 Docker support
+- 🔄 Kubernetes deployment
+- 🔄 GitHub Actions CI/CD
+- 🔄 Monitoring with Prometheus & Grafana
 
 ---
 
 # 👩‍💻 Author
 
-**Nidhi Sharma**
+## Nidhi Sharma
 
-Backend Developer | Java & Spring Boot Enthusiast
+Backend Developer | Java & Spring Boot | AI Integration
 
-- GitHub: https://github.com/nidhi2356
-- LinkedIn: _Add your LinkedIn profile link here_
+📧 Email
+
+nidhisharma00200@gmail.com
+
+💼 LinkedIn
+
+https://linkedin.com/in/Nidhi-Sharma2
+
+💻 GitHub
+
+https://github.com/nidhi2356
+
+---
+
+# 📚 Related Projects
+
+### 📔 Journal AI Service
+
+The Journal Application integrates with a dedicated AI microservice responsible for contextual journal analysis using LangChain and Hugging Face Inference Endpoints.
+
+Repository:
+
+https://github.com/nidhi2356/journal-ai-service
 
 ---
 
 # 🙏 Acknowledgements
 
-Special thanks to the open-source community and the teams behind:
+Special thanks to the teams and open-source communities behind:
 
 - Spring Boot
+- Spring Security
 - MongoDB Atlas
 - Redis
 - RabbitMQ
+- FastAPI
+- LangChain
+- Hugging Face
 - Swagger / OpenAPI
 - WeatherStack
 - ElevenLabs
@@ -1066,20 +889,34 @@ Special thanks to the open-source community and the teams behind:
 
 # ⭐ Support
 
-If you found this project helpful:
+If you found this project useful:
 
 ⭐ Star this repository
 
 🍴 Fork the project
 
-📢 Share your feedback
+🐞 Report bugs
 
-Your support helps improve the project and encourages future development.
+💡 Suggest new features
+
+Every contribution and suggestion is greatly appreciated.
+
+---
+
+# 📄 License
+
+This project is licensed under the **MIT License**.
+
+You are free to use, modify, and distribute this project under the terms of the MIT License.
 
 ---
 
 <div align="center">
 
-### 🚀 Built with Java, Spring Boot, and a passion for Backend Development ❤️
+## 🚀 Built with Java, Spring Boot, FastAPI, LangChain & Hugging Face
+
+### Thanks for visiting the repository ❤️
+
+If you enjoyed this project, don't forget to ⭐ the repository!
 
 </div>
