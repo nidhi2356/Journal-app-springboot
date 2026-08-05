@@ -686,7 +686,7 @@ MongoDB Atlas stores users, journal entries, and application configuration.
 Example of the personalized AI-generated weekly reflection email.
 
 <p align="center">
-<img src="assets/screenshots/weekly-email.png" width="90%">
+<img src="assets/screenshots/Weekly Reflection Email.png" width="90%">
 </p>
 
 ---
